@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        div{
+            background-color: antiquewhite;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        input[type=text],input[type=password],select{
+            width: 100%;
+            padding: 10px;
+            margin: 7px;
+            display: inline-block;
+            border: 1px solid grey;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type=submit]{
+            width: 100%;
+            background-color: blue;
+            color: white;
+            margin: 5px;
+            padding: 10px;
+            border: 2px solid blue;
+            border-radius: 5px ;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Registration Form</h3>
+        <form action="#" method="post">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Your First Name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Your Last Name..">
+
+            <label for="email">EmailId</label>
+            <input type="text" id="email" name="email" placeholder="Your EmailId..">
+
+            <label for="pass">Password</label>
+            <input type="password" id="pass" name="pass" placeholder="Your Password..">
+
+            <label for="country">Country</label>
+            <select id="country" name="country">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="canada">Canada</option>
+            </select>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
