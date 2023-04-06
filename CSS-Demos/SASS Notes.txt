@@ -1,0 +1,87 @@
+SASS ?
+------------
+
+we can not do the reusability of our css code.
+its very difficult to maintain when you have bigger project.
+
+SASS it is called CSS preprocessor
+super set of CSS
+
+we will write a code in SASS then we will comppile it to CSS.
+
+preprocessor: LESS,Stylus
+
+to work with SASS
+-------------------
+create file using sass / SCSS
+
+scss: sassy CSS (extention: .scss)
+sass: older syntax of sass (ex: .sass)
+
+How to use
+
+install sass libarary using nodejs
+
+------------------------------------------------
+create folder named sass-demo
+open in VS Code
+
+check node version by executing below command to verify node installed in system or not.
+
+> node -v
+> npm -v
+
+if versions are coming means node installed successfully.
+
+create package.json file by executing below command
+
+>npm init -y
+
+create 2 folders named scss and css 
+>mkdir scss css
+install sass
+>npm install sass --save-dev
+
+create file named main.sass in sass folder and this file we will compile and store the converted file in css folder.
+
+for continous conversion write command in package.json file in scripts.
+"compile-css": "sass sass/main.sass css/style.css --watch",
+
+(compile sass file and store the compiled one in style.css file)
+
+main.sass code
+-----------------------------------
+
+$color-primary: #55c57a
+$color-secondary: #7ed56f
+
+body
+    color:$color-primary
+h1
+    background-color:$color-primary
+
+save the file and from terminal execute below command
+
+>npm run sass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

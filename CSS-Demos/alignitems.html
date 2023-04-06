@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <style>
+        .flex-container{
+            width: 60%;
+            height: 70px;
+            flex: 1;
+            display: flex;
+            flex-flow: row wrap; 
+            align-items: flex-end;
+            /* strech, base-line*/
+        }
+        .flex-item{
+            padding:0 10px;
+            border: 2px solid blue;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item" style="min-height: 30px;">1</div>
+        <div class="flex-item" style="min-height: 50px;">2</div>
+        <div class="flex-item" style="min-height: 70px;">3</div>
+    </div>
+</body>
+</html>
