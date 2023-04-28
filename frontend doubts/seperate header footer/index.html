@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <title>Web Page</title>
+</head>
+
+<body>
+  <div id="header"></div>
+  <div id="navbar"></div>
+  <!--Remaining section-->
+  <div>
+    <h1>My Page Code</h1>
+  </div>
+  <div id="footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+    integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $(function () {
+    $("#header").load("header.html");
+    $("#navbar").load("navbar.html");
+    $("#footer").load("footer.html");
+    });
+  </script>
+</body>
+
+</html>

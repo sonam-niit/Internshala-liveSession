@@ -1,0 +1,79 @@
+API
+-------
+Application Program Interface
+
+REST API
+--------------
+Representational State Transfer
+
+using API we can transfer our data from one place to another place or from backend to frontend and frontend to backend using some HTTP methods like (get post put delete patch etc..) in some format.
+
+Formats can be: json, xml,  html etc...
+
+very popular format now a days is JSON (javascript object Notation)
+
+{
+	"id":1,
+	"name":"sonam",
+	"email":"sonam@gmail.com"
+	"password":"password@123"
+}
+
+object enclosed with curly braces
+key and value must be seperated using colon (:) 
+multiple keys must be seperated using comma (,)
+
+If you have multiple JSON objects then represent using JSON Array
+
+[
+	{
+	"id":1,
+	"name":"sonam",
+	"email":"sonam@gmail.com"
+	"password":"password@123"
+	},
+	{
+	"id":2,
+	"name":"alex",
+	"email":"alex@gmail.com"
+	"password":"alex@123"
+	}
+]
+Diffrence between javascript objects and JSON
+javascript objects are more flexible
+
+{id:1,name:"sonam",email:""}
+
+when you pass the data in the form json
+
+{"id":1,"name":"sonam","email":""}
+===================================================================
+
+How to create REST APIs
+
+create APIs we can use express with Node.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
