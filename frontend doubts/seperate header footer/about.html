@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Web Page</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div id="navbar"></div>
+    <!--Remaining section-->
+    <div>
+        <h1>My About Us Page</h1>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    </div>
+    <div id="footer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#navbar").load("navbar.html",function () {
+                var Murl = location.pathname;
+                //Murl gets the pathname from addressbar
+                var ActiveUrl = Murl.slice(1, Murl.length);
+                $('.navbar-nav li').removeClass('active');
+                //ThisURL gets all the href from navbar
+                var ThisURL = $('.navbar-nav li a').attr('href');
+                if (ThisURL = ActiveUrl) {
+                    $('.navbar-nav li a[href="' + ThisURL + '"]').parent().addClass('active');
+                }
+            });
+            $("#footer").load("footer.html");
+        });
+
+    </script>
+</body>
+
+</html>

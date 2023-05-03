@@ -18,8 +18,16 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     $(function () {
-    $("#header").load("header.html");
-    $("#navbar").load("navbar.html");
+    $("#header").load("header.html",);
+    $("#navbar").load("navbar.html",function () {
+                var Murl = location.pathname;
+                var ActiveUrl = Murl.slice(1, Murl.length);
+                $('.navbar-nav li').removeClass('active');
+                var ThisURL = $('.navbar-nav li a').attr('href');
+                if (ThisURL = ActiveUrl) {
+                    $('.navbar-nav li a[href="' + ThisURL + '"]').parent().addClass('active');
+                }
+            });
     $("#footer").load("footer.html");
     });
   </script>
