@@ -1,0 +1,49 @@
+Deploy out simple HTML & CSS site to some live environment
+-----------------------------------------------------------
+
+for free deployment of our application
+
+https://www.netlify.com/
+
+if you have github account then create account using github once else use email.
+
+1.  To upload the static websites.
+
+just click on Add new site --> deploy mannualy
+
+just drag and drop your site folder.
+
+it will simply deploy your application with some random name and provide you the URL where you can check you live Website.
+
+2. Deploy React application manually.
+
+   create react application
+   move to the folder
+
+   npm run build
+
+   npm install netlify-cli -g
+
+   netlify deploy
+
+   it will ask you deploy on same sit or create new --> if you want to create new then give the name and it will ask you to choose deployment folder then type
+
+	./build
+
+	once its deployed it will provide you the link for your live site.
+
+
+3. Deploy from GitHub:
+
+	add new site --> import existing project --> select github -->search for repository and provide all repository access.
+
+then select the repository which you want to include
+
+branch to deploy : main
+
+click on deploy site
+
+It will deploy your site on netlify
+
+if you make any changes to github repo automatically it found changes--> execute build command--> if build successfull then it will deploy the same.
+
