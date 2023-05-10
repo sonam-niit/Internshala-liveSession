@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>practice bootstrap</title>
+</head>
+<body>
+  <ul class="nav flex-column flex-sm-row nav-pills mt-2 ms-2">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Home</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Profiles</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/pages/mukesh.html">Mukesh Ambani</a></li>
+        <li><a class="dropdown-item" href="/pages/ratan.html">Ratan Tata</a></li>
+        <li><a class="dropdown-item" href="/pages/mark.html">Mark Zukerberg</a></li>
+        <li><a class="dropdown-item" href="pages/elon.html">Elon Musk</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/contact .html">Contact Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/pages/logout.html">Logout</a>
+    </li>
+  </ul>
+<!-- cards of bootstrap-->
+
+    <h2 style="margin-left: 15px;">Welcome to Home Screen</h2>
+    <br>
+    <div class="container-fluid">
+<div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card" style="width: 320px;">
+            <img class="card-img-top img-fluid w-auto h-75" src="images/mukesh-ambani.jpg" alt="">
+            <div class="card-body">
+                <h3 class="card-title"> Mukesh Ambani</h3>
+                <p class="card-text"> Mukessh Ambani is a businessman Ambani began a business trading in spices in the late 1950s, calling his nascent venture Reliance Commercial Corporation</p>
+                <button onclick="document.location='/pages/mukesh.html'" class="btn btn-primary" >Explore</button>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12">
+    <div class="card" style="width: 320px;">
+        <img class="card-img-top img-fluid w-auto h-auto" src="/images/ratan-tata.jpg" alt="">
+        <div class="card-body">
+            <h3 class="card-title"> Ratan Tata</h3>
+            <p class="card-text"> Mr Tata was the chairman of major Tata companies, including Tata Motors, Tata Steel, Tata Consultancy Services, Tata Power, Tata Global Beverages, Tata Chemicals, Indian Hotels etc.</p>
+            <button onclick="document.location='/pages/ratan.html'" class="btn btn-primary">Explore</button>
+    </div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12">
+    <div class="card" style="width: 320px;">
+        <img class="card-img-top" src="/images/mark.jpg" alt="">
+        <div class="card-body">
+            <h3 class="card-title"> Mark zuckerberg</h3>
+            <p class="card-text"> Mark Zuckerberg, Founder, Chairman and Chief Executive Officer. Mark Zuckerberg is the founder, chairman and CEO of Meta, which he originally founded as Facebook in 2004.</p>
+            <button class="btn btn-primary">Explore</button>
+    </div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12">
+    <div class="card" style="width: 320px;">
+        <img class="card-img-top" src="/images/elon musk.jpg" alt="">
+        <div class="card-body">
+            <h3 class="card-title"> Elon Musk</h3>
+            <p class="card-text">Mark Zuckerberg, Founder, Chairman and Chief Executive Officer. Mark Zuckerberg is the founder, chairman and CEO of Meta</p>
+            <button class="btn btn-primary">Explore</button>
+
+    </div>
+</div>
+</div>
+</div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

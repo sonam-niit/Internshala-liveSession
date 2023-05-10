@@ -1,0 +1,227 @@
+Version Control system:
+
+project: sending messages and receiving message (v1)
+
+   update: send images and receive images (v2)
+
+   update: send videos and receive videos (v3)
+
+  
+Why Git as Version Control Tool?
+--------------------------------------
+
+features: 
+
+providing very nstrong support for non-linear development.
+
+distributed respository model
+
+compitable with all protocols like HTTP, FTP, SSH etc..
+
+easy to handle na very big projects.
+
+
+
+cost: free.
+
+
+====================================================================================
+
+How Git Works
+----------------
+
+1. Working Copy: the code which is availablt to your local system where you can edit your code and then later, f everything is correct then commit it to staging area.
+(its your code workspace)
+
+2. Staging Area: Its a middle ground between what you have done to your files and what you have last commited.
+	its simple a stage which basically shows the stage of your code by comparing your last commit and your working copy.
+
+Repository: (its a location where we can store our software packages project alog with all project details like meta data.)
+
+to create repository we need to create an account on github.com where we can add our projects code.
+
+to add code from our local system to remote repository the software which we are using its git.
+
+==================================================================================================
+
+to work with github create an acocunt on github.com and install git software to your local system.
+
+if the isntallatiion done successfully then open command prompt and check the git version.
+
+>git --version
+
+if you are geeting a version means git installed successfully to your system.
+
+Let understand the Git Commands.
+-----------------------------------
+
+create a folder named myproject and add some files to it. To push the project on github let's create github repsotory on github.com.
+
+goto github.com --> click new --> create new Repository --> give the project name add description. --> click on create repository.
+
+to push the local code on live repo let's understand some git hub command.
+
+1. git init: used to initialized an empty repository to your folder.
+
+	(it is creating .git hidden folder where you have executed command.
+
+	per project you need to execute this command only once.
+2. git config: this is to configure your github account from your local system.
+
+	>git config --global user.email "sonam@gmail.com"
+                              OR
+	>git config --global user.name "sonam-niit"
+
+(This command you need to execute only once to config your account)
+
+3. set up a branch name: by default your branch name is master.
+
+			>git branch -M main
+
+			(change my branch from master to main)
+	(branch changing you can do according you repository required)
+
+4. set origin:
+	(when you push your code where it will push that is deside by the origin)
+
+	>git remote add origin https://github.com/sonam-niit/MyProject1.git
+	(execute only once when you have created a new repository)
+
+5. git add: add command with add all your files and folders to the staging area.
+
+	if you want to add only one file > git add filename
+	to add all > git add ..
+
+	it will add all the working files in staging area.
+
+6. git status: to check the status of git repo.
+
+7. git rm --cached filename: if you want remove file from staging area the use this command.
+
+8. git commit : this command will add all the staged files to its local repository.
+		git commit -m "message"
+
+		it will create all the staging area files to the local repo.
+
+9. git push: push command will push your code from local repository to remote repository.
+
+		>git push -u origin main
+		(it will push codes which commented to remote repo)
+
+		first time when you execute push command it will give you authentication pop up, select default authentication , browser authentication enter your and email and password, if validated then your code will push on git repository.
+
+let's create one style.css file and edit html file too.
+
+the chnages if you want to push to git then execute these 3 commands again
+
+>git add .
+>git commit -m "message"
+>git push -u origin main
+
+changes now reflected to remote repository.
+
+===================================================================================================
+if you will make any changes directly to your remote repository, may be some of your team member pushed some code to git repo.
+
+like add readme file directly from git hub.
+
+changes not reflecting to my local repository directly.
+
+to get the live updates of your repo to your local repo execute pull command.
+
+>git pull
+
+after that you can push the updated files to your remote repository.
+
+
+==================================================================================
+
+to use my repository to your system to work with user git clone command.
+
+>git clone https://github.com/sonam-niit/MyProject1.git
+
+(it will add all files available to this repo to your local system)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
