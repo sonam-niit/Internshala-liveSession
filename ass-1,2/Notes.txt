@@ -42,6 +42,28 @@ app.listen(5000,()=>{
     console.log(`Server Started on a Port No 5000`)
 })
 =============================================================================================
+here i have simply used app.use and we are creating simple path like /file, /data etc..
+
+we can also create diffrent path with diffrent methods (HTTP methods)
+
+get: get the data
+post: to create new data
+put: update data
+delete: delete the data.
+
+let's create one express server with diffrent apis.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
