@@ -1,0 +1,246 @@
+Frontend Projects (Coding Basics)
+-----------------------------------------
+1. make a proper project sctructure
+
+	creating proper folders
+(Naming convention matters a lot)
+	-- give proper names to your folder
+	e.g. ModuleAssignment1-HTML
+	     ModuleAssignment2-CSS
+
+2. Make proper files with relevant names
+	main file name should be index.html
+
+	-- About Us- about.html
+	-- Contact Us- contact.html
+	-- news - news.html
+	(always give relavant names)
+
+3. if you are creating files like css files, javascript files and adding some images, make sure you keep them in propers folders don't add everything at one folder location.
+
+	for css files create folder named css
+	for js files create folder named js
+	for images create folder named images.
+
+4. when you link files to your page always give relative path, don't give absolute path
+
+	absolute: D://myfiles/moduleassignments/images/img1.png
+	relative: images/img1.png
+	
+	always use relative path in your codings
+	(Note: If you use absolute path then the path is your computer system path that will not work to ours system.)
+5. while including external css we are link tag
+
+	<link href=""  rel="stylesheet">
+	
+	note: if you will not use rel attribute than stylesheet will not work in your page.
+
+	type="text/css" was required till HTML4, not required in version HTML5
+
+6. when you include css external files keep them in a head section.
+   for js files always keep them at the end of the body section.
+
+	<body>
+		//codes
+    		<script src="js/script1.js"></script>
+	</body>
+
+before ending of body section include  script files.
+
+7. To create zip files--> just right click to your folder --> send to --> compressed zip folder--> click on that and you will get the zip file.
+
+8. make sure you include proper comments to your code which makes your code readable and also looks like a documented code.
+in HTML : <!-- This is My Comment -->
+in CSS : /* 
+    		This is the Comment
+	*/
+in JS: // this is my Comment
+in .env file: # This is my comment
+
+
+Backend Coding Basics
+---------------------------------------------------------------------------------------------
+1. always when you create folder for your backend projects 
+	first of all create package.json file 
+
+	>npm init (it  will popup with some set of question and last it will create json file)
+	>npm init -y (this will create direct package.json file without asking any question)
+
+2. install all required dependencies
+	
+	you can install all dependencies together by just seperating the packages name with space
+
+	>npm i express node-persist nodemon
+
+	(executing by this command it will install all 3 packages)
+
+	>when you install them your package.json file will get updated.
+	>it will create one folder named node_modules with all the required files for these 3 packages.
+	>it will also give you one package-lock.json file which shows the links from where packages downloaded of which version.
+
+3. Wheneve you share your project someone, uploading it on github, remove node_modules folder from the project.
+	> the one who download project will just execute one command
+	>npm install
+
+	based on pckage.json and packge-lock.json file it will donwloda all dependencies and create node_module folder in their system.
+
+4. if you want to write your own scripts you can write in package.json file in scripts part.
+
+	"scripts": {
+    		"start":"node myassignment.js",
+    		"test": "echo \"Error: no test specified\" && exit 1"
+  	}
+
+if you want to run the command like mode myassignment.js
+just type 
+
+>npm start
+
+5. .env file
+
+    whenever you want include some data like JWT token secret key, DB URL, DB password, Port no
+	--> you should keep them in a secret environmental file called (.env)
+
+	here you need to store the values in the combination of Key Value pair, no sigle quote no double quote, just and it value
+
+	-- PORT = 5000
+
+	create .env file in your project
+		PORT=5000
+		PASSWORD=Sonam@123
+		JWT_SECRET=abcdefghijklmnopqrstuvwxyz
+
+	to use them install dotenv package
+	>npm i dotenv
+
+	
+	to use: create test.js file
+
+	const dotenv= require('dotenv')
+	dotenv.config();
+
+	console.log("Port "+ process.env.PORT)
+	console.log("Password "+ process.env.PASSWORD)
+	console.log("SECRET "+ process.env.JWT_SECRET)
+
+Run: node test.js
+
+(so can see we can access data using .env file)
+
+6. then main file better you should keep its name as index.js
+7.  Every time when you change your code in node JS, you have to restart your server
+
+    if you don't want to do it manually and your server restarts automatically then use nodemon package.
+
+	npm install nodemon
+
+	after installation change script in package.json file
+	"start":"nodemon test.js"
+	>npm start
+	it will run test.js file whenever you make changes, the server restarts again.
+
+8. Keep your routes in a seperate routes files
+9. keep your logics in a seperate controller files
+	(always keep your business logic seperated from your routing logics)
+
+10. Models you should keep in seperate folder called models.
+	(Schema: user,product)
+
+
+
+React Application: Coding Basics
+---------------------------------------------
+1. npx create-react-app Ecommerse
+
+	(it will create folder ecommerse which is your react application)
+
+   run: npm start (localhost:3000)- see output
+
+2. make sure you keep your components in a seperate folder like components.
+	-- header
+	-- footer
+	-- navbar
+
+	if you are creating pages you can keep them in a seperate pages folder
+
+	if you are writing external css then keep them in a seperate folder.
+
+3. Make sure you include proper comments.
+
+Common Javascript Coding Basics
+----------------------------------------------
+
+1. always make a proper use of functions.
+
+	don't write a code direcly better if you create as function you your code will be come resuable.
+
+2. Make a proper use of functions which are available.
+
+	so many array functions available:
+		where to use which matters a lot.
+
+
+	const myArray=[10,20,60,3,4,5,60,7,80,9];
+	//to just iterate with array use for each
+	myArray.forEach((value,index)=>{
+    	console.log(`${index+1} value= ${value}`)
+	})
+	//to generate one array from another one use map
+	const result=myArray.map((value,index)=> value*2)
+	console.log(result)
+	//to filter some data use filter
+	const result1=myArray.filter((value,index)=> value%5 ==0)
+	console.log(result1)
+	//to find one element from list use find
+	//it will find only first match not all
+	const found =myArray.find((value)=>value==60)
+	console.log(found)
+	//find Index of the number which you wnat to find
+	const foundIndex =myArray.findIndex((value)=>value==60)
+	console.log(foundIndex+" "+myArray[foundIndex])
+	
+3. declare function first and then define and later use it
+
+	//declare function and then define
+		const viewUser= function(){
+
+		}
+
+		viewUser();
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
