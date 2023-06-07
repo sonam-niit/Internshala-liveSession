@@ -1,0 +1,67 @@
+capstone project
+=======================
+
+All these pages have Same header and footer
+create them seperately and include them in all pages.
+
+create header.html and footer.html later we include them in all below mentioned pages.
+
+Header.html -- divided in 2 parts
+
+---- logo search filed , login and cart button (icon take from font-awesome librray)
+---- Navigation with 2 dropdowns for women and men
+
+1. Home Page(index.html):
+---- common header and common footer remains there
+---- Featured product slider
+	(slider- add card view for each product)
+	-- 4 cards for lg creen
+	-- 2 cards for sm screens
+	-- 1 for xs screen (mobile screen)
+
+
+2. AllProducts(applproducst.html)
+
+--- common header and common footer remains there
+--- title for All Products
+show row
+-- in one row show 6 products
+	tablet screen (show 3)
+	mobile screen (show 2)
+
+3. Contact(contact.html):
+---------------------------------------
+-- common header and footer
+-- add title for Contact Us
+-- add one row div
+one 6 column section add image 
+another 6 column section add contact form
+
+when you contact form apply valiadtion using required
+also use proper type for email type=email, button type= submit
+
+when use click on submit button 
+
+check email = admin@admin.com
+      password= 123456
+(it shows alert="login successful..!!"
+else shows incorrect email or password
+
+4.Cart(cart.html)
+-----------------------------
+-- common header and common footer
+-- here also divide row in 2 sections
+-- left side show items in cart
+-- right side shows summary
+
+its just a dummy design, no need to create working buttons 
+
+
+
+
+
+
+
+
+
+
