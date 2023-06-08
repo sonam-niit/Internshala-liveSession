@@ -1,0 +1,334 @@
+Simple Programming in javascript 
+----------------------------------------
+
+common Bugs
+-------------------
+1. Bracket Mismatch/paranthesis missing
+
+brackets mismatch is basically you can identify by using the editors like VS code. If you select any bracket automatically based on that you can see its closing.
+
+Also, you can collapse and expand the code to identify the proper  opening and closings of your tags.
+
+http.createServer(function (req,res){
+    if(res.statusCode==500){
+
+    }
+    else{
+
+    }
+})
+
+--> sometimes when you call the method but you forgot to add paranthesis and because of that your method callinmg is not working.
+
+--> while calling methods or using properties just hover to it and editor will give you the information like its a property or function 
+
+--> property you can use directly but for function put paranthesis.
+
+not correct
+function testMe(num1,num2){
+    if (num1>num2) && (num1>789){
+        
+    }
+}
+
+correct it by adding parenthesis to outer side if
+function testMe(num1,num2){
+    if ((num1>num2) && (num1>789)){
+        
+    }
+}
+
+2. semicolon
+-------------------
+it is not complsary in your code
+
+but if you write 2 statements in one line then its required.
+let num1=20 ; let num2=40;
+
+suggestion: every statement when its completed then end with ; for better practice.
+
+
+3. missing proper parameters while calling function.
+
+function add(num1,num2,num3){
+    return(num1+num2+num3)
+}
+
+console.log(add(12,12,45))
+
+4. while declaring a variable make sure you use proper name, don't use the reserved keywords.
+
+let var;
+
+var function=78;
+
+var if;
+
+//invalid values
+
+5. equality opeartor
+
+ =  : asssign a value
+
+ == : compare only value
+
+ === : compare value with its data type
+
+--------------------------------------------------------------------
+let name="Sonam" //string literal
+let name1= new String("Sonam"); //string object
+let name2= new String("Sonam"); //another string object
+
+let name3=name2; //storing one object to another
+
+console.log(`compare values ${name==name1}`);
+console.log(`compare values + type ${name===name1}`);
+
+console.log(`compare values ${name1==name2}`);
+console.log(`compare values + type ${name1===name2}`);
+
+console.log(`compare values ${name3==name2}`);
+console.log(`compare values + type ${name3===name2}`);
+
+
+6. accessing array
+----------------------------------------------
+
+if you are trying to access an index which is actually not available.
+
+
+const array= [1,2,43,56,7,8];
+
+const index=4
+
+if(index>=array.length)
+    console.log("No index available")
+else
+    console.log(array[index]);
+
+==============================================================
+
+7. how to work with promises
+
+--- then(). catch()
+--- async await way
+
+
+const mypromise = new Promise((resolve, reject) => {
+
+    if (90 > 70) {
+        resolve("Congratulation...!!")
+    }
+    else {
+        reject("Error Occured")
+    }
+})
+
+const myFunction = async () => {
+
+    try {
+        const result = await mypromise;
+        console.log(`Resolved: ${result}`)
+    } catch (err) {
+        console.log(`Rejected: ${err}`)
+    }
+
+}
+console.log("Promise with then starts")
+mypromise
+    .then((resp) => console.log(`Resolved: ${resp}`))
+    .catch((err) => console.log(`Rejected: ${err}`))
+console.log("Promise with then ends")
+console.log("Promise with async starts")
+myFunction();
+console.log("Promise with async ends")
+
+
+----------------------------------------------------------------------------
+fetch Data from API
+
+async function fetchData(){
+
+    try {
+        const resp=await fetch('https://jsonplaceholder.typicode.com/users/1')
+        const json= await resp.json();
+        console.log(json)
+
+    } catch (error) {
+        console.log(`Error Occured ${error}`)
+    }
+}
+
+fetchData();
+
+--------------------------------------------------------------------------------
+
+Using Express load html file as response
+
+const express= require('express');
+const path= require('path');
+
+const app= express();
+
+app.get("/intro", (req,res)=>{
+
+    res.sendFile(path.join(__dirname,"resp.html"));
+})
+
+app.listen(5000,()=>{console.log(`application started on port 5000`)})
+
+=====================================================================================
+Common React Bugs
+
+1. alwasy export the component which you have created.
+
+2. when use && operator apply logic as below
+
+import react from 'react';
+
+export function Products(){
+
+    //let items=[]
+    let items=[{id:1},{id:2}];
+
+    return(
+        <div>
+            {(!!items.length) && <p>{items.length} items available in the List</p>}
+        </div>
+    )
+}
+
+3. getting key warning while using array
+
+import React from "react";
+
+export function UserList(){
+
+    const data=[
+        {id:1,name:"Amit"},
+        {id:2,name:"Tarun"},
+        {id:3,name:"Sonam"}
+    ]
+    return(<>
+        {
+            data.map((content)=>(
+                <div key={content.id}>
+                    <p>{content.id} {content.name}</p>
+                </div>
+            ))
+        }
+    </>)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
